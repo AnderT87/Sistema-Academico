@@ -7,9 +7,8 @@ import ec.gob.orellana.www.sistemaacademico.estudiantes.Estudiante;
 import ec.gob.orellana.www.sistemaacademico.personasservicios.PersonalServicios;
 import ec.gob.orellana.www.sistemaacademico.decanos.Decano;
 import ec.gob.orellana.www.sistemaacademico.personasinvitadas.PersonaInvitada;
-import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
+//import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesor;
-import ec.gob.orellana.www.sistemaacademico.clases.*;
 import ec.gob.orellana.www.sistemaacademico.decanos.Decanos;
 import ec.gob.orellana.www.sistemaacademico.decanos.IDecanos;
 import ec.gob.orellana.www.sistemaacademico.estudiantes.Estudiantes;
@@ -20,10 +19,23 @@ import ec.gob.orellana.www.sistemaacademico.personasservicios.IPersonasServicios
 import ec.gob.orellana.www.sistemaacademico.personasservicios.PersonasServicios;
 import ec.gob.orellana.www.sistemaacademico.profesores.IProfesores;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesores;
+import ec.gob.orellana.www.sistemaacademico.vista.VProfesores;
+import ec.gob.orellana.www.sistemaacademico.vista.VentanaSeleccion;
+import javax.swing.SwingUtilities;
 
 public class SistemaAcademico {
 
     public static void main(String[] args) {
+        
+        SwingUtilities.invokeLater(() -> {
+            new VentanaSeleccion().setVisible(true);
+        });
+        /*
+        VentanaSeleccion seleccion = new VentanaSeleccion();
+        seleccion.setVisible(true);
+        VProfesores vistaProfesores = new VProfesores();
+        vistaProfesores.setVisible(true);
+        */
         
         //CLASE PERSONA INVITADA
         System.out.println("---PERSONA INVITADA---");
@@ -41,6 +53,7 @@ public class SistemaAcademico {
         objPersonaInvitada.actualizarPersonaInvitada(1, pModificada);
         objPersonaInvitada.imprimirDatos();
         System.out.println(" ");
+        
         //CLASE ESTUDIANTE
         IEstudiantes objEstudiante = new Estudiantes (3);
         //Constructur datos Estudiante
@@ -63,6 +76,7 @@ public class SistemaAcademico {
         objEstudiante.eliminarEstudiante(2, EliminarE);
         objEstudiante.imprimirDato();
         System.out.println(" ");
+        
         //CLASE PERSONA DE SERVICIO
         System.out.println("---PERSONAL DE SERVICIO---");
         IPersonasServicios objPServicios = new PersonasServicios(2);
@@ -79,22 +93,39 @@ public class SistemaAcademico {
         objPServicios.actualizarPersonalServicio(1, sModificada);
         objPServicios.imprimirDatos();
         System.out.println(" ");
+        
         //CLASE PROFESOR
         System.out.println("---PROFESOR---");
+        
+        //Constructor
         IProfesores objProfesor = new Profesores(3);
      
-        Profesor profesorUno = new Profesor(Escalafon.AUXILIAR, 2345,"Juan@espoch.edu.ec", "Juan",2, "juan@espoch.edu.ec", "220046735");
-        Profesor profesorDos = new Profesor(Escalafon.AUXILIAR, 2756,"Alex@espoch.edu.ec", "Alex",5, "alex@espoch.edu.ec", "228872628");
+        Profesor profesorUno = new Profesor(/*Escalafon.AUXILIAR,*/2345,"Juan@espoch.edu.ec", "Juan",2, "juan@espoch.edu.ec", "220046735");
+        Profesor profesorDos = new Profesor(/*Escalafon.AUXILIAR,*/ 2756,"Alex@espoch.edu.ec", "Alex",5, "alex@espoch.edu.ec", "228872628");
         
-        Profesor agregoProfesor = new Profesor(Escalafon.PRINCIPAL, 2345, "Josue@espoch.edu.ec", "Josue", 5, "josue@gmail.com", "22546738");
+        Profesor agregoProfesor = new Profesor(/*Escalafon.PRINCIPAL, */2345, "Josue@espoch.edu.ec", "Josue", 5, "josue@gmail.com", "22546738");
         
+        //Metodos
+        
+        //Agregar
         objProfesor.agregarProfesor(profesorUno);
         objProfesor.agregarProfesor(profesorDos);
         objProfesor.agregarProfesor(agregoProfesor);
         objProfesor.imprimirDatos();
-        //IProfesores objProfesores  = new Profesores();
-        //objProfesores.imprimirDatos(profesor);
+        //Eliminar
+        Profesor eProfesor = new Profesor(/*null, */0, " ", " ", 0, " ", " ");
+        objProfesor.eliminarProfesor(2, eProfesor);
+        objProfesor.imprimirDatos();
+        
+        //Actualizar
+        Profesor aProfesor = new Profesor(/*Escalafon.AGREGAR,*/ 2345, "Erick@gmail.com", "Erick", 1234, "Erick@gmail.com", "23876766");
+        objProfesor.eliminarProfesor(2, eProfesor);
         System.out.println(" ");
+        
+        //Buscar
+        objProfesor.buscarProfesor(2);
+        objProfesor.imprimirDatos();
+        
         //CLASE DECANO
         IDecanos objDecano = new Decanos (2);
         //Constructor datos Decano

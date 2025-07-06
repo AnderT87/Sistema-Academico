@@ -1,7 +1,7 @@
 
 package ec.gob.orellana.www.sistemaacademico.personasservicios;
 
-import ec.gob.orellana.www.sistemaacademico.clases.Empleado;
+import ec.gob.orellana.www.sistemaacademico.empleado.Empleado;
 
 
 public class PersonalServicios extends Empleado{

@@ -4,7 +4,7 @@
  */
 package ec.gob.orellana.www.sistemaacademico.decanos;
 
-import ec.gob.orellana.www.sistemaacademico.clases.PersonalAcademico;
+import ec.gob.orellana.www.sistemaacademico.personalaacademico.PersonalAcademico;
 
 public class Decano extends PersonalAcademico {
     private String nivelJerarquico; 
