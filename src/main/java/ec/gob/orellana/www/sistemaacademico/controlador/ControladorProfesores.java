@@ -45,8 +45,8 @@ public class ControladorProfesores {
                     correoInstitucionalProfesor,
                     nombreProfesor,
                     idProfesor,
-                    cedulaProfesor,
-                    correoPersonalProfesor);
+                    correoPersonalProfesor,
+                    cedulaProfesor);
             boolean agregar = iProfesores.agregarProfesor(nuevoProfesor);
             if(agregar == true){
               notificarMensaje.mostrarMensaje("Profesor Agregado Exito");
@@ -61,12 +61,14 @@ public class ControladorProfesores {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
             boolean profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
+            notificarMensaje.mostrarMensaje("Profesor encontrado");
+           
             
         } catch (Exception e) {
             notificarMensaje.mostrarMensaje("Profesor no encontrado");
         }
     }
-    /*
+    
     public void procesoControladorEliminarProfesor(){
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
@@ -74,12 +76,55 @@ public class ControladorProfesores {
             Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
             if(profesorBuscado == true){
                 iProfesores.eliminarProfesor(iDProfesor, eliminarProfesor);
-                
+                notificarMensaje.mostrarMensaje("Profesor eliminado");         
             }
         } catch (Exception e) {
+            notificarMensaje.mostrarMensaje("Error al eliminar el Profesor");
+        }        
+    } 
+    
+    public void procesoControladorActualizarProfesor() {
+    try {
+        int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
+
+        boolean existe = iProfesores.buscarProfesor(iDProfesor);
+        if (existe) {
+            String nombreProfesor = vistaProfesor.getNombreProfesor();
+            String correoPersonalProfesor = vistaProfesor.getCorreoPersonal();
+            String cedulaProfesor = vistaProfesor.getCedula();
+            String correoInstitucionalProfesor = vistaProfesor.getCorreoInstitucional();
+            double sueldoProfesor = Double.parseDouble(vistaProfesor.getSuledo());
+            // Escalafon escalafonProfesor = vistaProfesor.getEscalafon(); // si aplica
+
+            
+            Profesor profesorActualizado = new Profesor(
+                // escalafonProfesor,
+                sueldoProfesor,
+                correoInstitucionalProfesor,
+                nombreProfesor,
+                iDProfesor,
+                cedulaProfesor,
+                correoPersonalProfesor
+            );
+
+            
+            iProfesores.actualizarProfesor(iDProfesor, profesorActualizado);
+
+            
+            notificarMensaje.mostrarMensaje("Profesor actualizado con éxito");
+
+        } else {
+            notificarMensaje.mostrarMensaje("No se encontró profesor con ID: " + iDProfesor);
         }
-        
-    } */
+
+    } catch (NumberFormatException ex) {
+        notificarMensaje.mostrarMensaje("ID o Sueldo inválido. Verifica los datos numéricos.");
+    } catch (Exception e) {
+        e.printStackTrace();
+        notificarMensaje.mostrarMensaje("Error al actualizar el profesor");
+    }
+}
+
 
 }
 

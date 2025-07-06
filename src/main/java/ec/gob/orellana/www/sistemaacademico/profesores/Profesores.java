@@ -35,21 +35,29 @@ public class Profesores implements IProfesores {
         }
     }
     
-    public boolean eliminarProfesor(int i,Profesor profesoress){
+    public boolean eliminarProfesor(int id,Profesor profesoress){
+        for (int i = 0; i < totalProfesores; i++){
         profesores[i]= profesoress;
-        System.out.println("Profesor eliminado");
+            System.out.println("Cedula: "+profesores[i].getCedula());
+            System.out.println("Profesor eliminado");
         return true;
+        }
+        return false;
     }
     
-    public boolean actualizarProfesor(int i,Profesor profesoress){
-        profesores[i]= profesoress;
-        return true;
+    public boolean actualizarProfesor(int iD,Profesor profesoress){
+        for (int i = 0; i < totalProfesores; i++){
+            profesores[i]= profesoress;
+            imprimirDatos();
+            return true;
+        }
+        return false;
     }
     
     public boolean buscarProfesor(int id){
         for (int i = 0; i < totalProfesores; i++){
             if(profesores[i].getId()==id){
-                System.out.println("Profesor encontrado");
+                imprimirDatos();
                 return true;
             }else{
                 System.out.println("Codigo erroneo");
