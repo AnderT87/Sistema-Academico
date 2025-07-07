@@ -5,22 +5,23 @@ import ec.gob.orellana.www.sistemaacademico.personas.Persona;
 
 public class PersonaInvitada extends Persona {
     
-    private String descripcion;
+    //private String descripcion;
     
     
     //Constructor
     public PersonaInvitada(String nombre, int id, String correo, String cedula, String descripcion){
         super(nombre, id, correo, cedula);
-        this.descripcion = descripcion;
+        //this.descripcion = descripcion;
+        super.toString();
     }
 
-    public String getDescripcion() {
+   /* public String getDescripcion() {
         return descripcion;
-    }
+    }*/
 
-    public void setDescripcion(String descripcion) {
+   /* public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
+    }*/
     
     
     //Metodos

@@ -24,13 +24,43 @@ public class PersonasInvitadas implements IPersonasInvitadas {
     
     public void imprimirDatos (){
         for (int i = 0; i < totalPersonasI; i++) {
-            System.out.println("Datos de la persona invitada : " + personasInvitadas[i].getDescripcion());
-            
+            System.out.println("Datos de la persona: " + personasInvitadas[i].getNombre());
+            System.out.println("" +  personasInvitadas[i].getCedula());
+            System.out.println("" + personasInvitadas[i].getCorreo());
+            System.out.println(""+ personasInvitadas[i].getId());
         }
     }
     
-    public boolean actualizarPersonaInvitada(int i, PersonaInvitada personaInvitada){
-        personasInvitadas[i]= personaInvitada;
+    public boolean actualizarPersonaInvitada(int id, PersonaInvitada personaInvitada){
+        for (int i = 0; i < totalPersonasI; i++) {
+            personasInvitadas[i]= personaInvitada;
+            imprimirDatos();
+            return true;
+        }
         return true;
     }
+    
+    public boolean eliminarPersonaInvitada (int id, PersonaInvitada personaInvitada){
+        for (int i = 0; i < totalPersonasI; i++) {
+            personasInvitadas [i]= personaInvitada;
+            System.out.println("Cedula" + personasInvitadas[i].getCedula());
+            System.out.println("Persona Eliminada");
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean buscarPersonaInvitada(int id){
+        for (int i = 0; i < totalPersonasI; i++){
+            if(personasInvitadas[i].getId()==id){
+                imprimirDatos();
+                return true;
+            }else{
+                System.out.println("Codigo erroneo");
+                return false;
+            }
+        }
+        return false;
+    }
+    
 }

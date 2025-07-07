@@ -30,6 +30,7 @@ public class SistemaAcademico {
         SwingUtilities.invokeLater(() -> {
             new VentanaSeleccion().setVisible(true);
         });
+        
         /*
         VentanaSeleccion seleccion = new VentanaSeleccion();
         seleccion.setVisible(true);
