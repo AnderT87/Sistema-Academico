@@ -6,6 +6,6 @@ package ec.gob.orellana.www.sistemaacademico.profesores;
 
 public enum Escalafon {
     PRINCIPAL, 
-    AGREGAR,
+    AGREGADO,
     AUXILIAR;
 }

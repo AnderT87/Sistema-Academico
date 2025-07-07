@@ -5,6 +5,7 @@
 package ec.gob.orellana.www.sistemaacademico.controlador;
 
 //import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
+import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
 import ec.gob.orellana.www.sistemaacademico.profesores.IProfesores;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesor;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesores;
@@ -28,6 +29,17 @@ public class ControladorProfesores {
         this.iProfesores = new Profesores(10);
          this.notificarMensaje = new NotificadorMensaje();
     }
+    
+    private Escalafon identificarEscalafon(String escalafon){
+        
+       Escalafon tipo=Escalafon.AGREGADO; 
+        if("PRINCIPAL".equals(escalafon)){        
+         tipo=Escalafon.PRINCIPAL;
+        }else if("AGREGADO".equals(escalafon)){        
+        tipo=Escalafon.AGREGADO;
+        } 
+        return tipo;
+    }
 
     public void procesoControladorProfesor() {
         try {
@@ -36,11 +48,12 @@ public class ControladorProfesores {
             String cedulaProfesor = vistaProfesor.getCedula();
             String correoInstitucionalProfesor = vistaProfesor.getCorreoInstitucional();
             double sueldoProfesor = Double.parseDouble(vistaProfesor.getSuledo());
-            //Escalafon escalafonProfesor = vistaProfesor.getEscalafon();
+            String escalafonProfesor = vistaProfesor.getEscalafon();
+            Escalafon tipoEscalafon=identificarEscalafon(escalafonProfesor);
             int idProfesor= Integer.parseInt(vistaProfesor.getId());
 
             Profesor nuevoProfesor = new Profesor(
-                   // escalafonProfesor,
+                    tipoEscalafon,
                     sueldoProfesor,
                     correoInstitucionalProfesor,
                     nombreProfesor,
@@ -73,9 +86,9 @@ public class ControladorProfesores {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
             boolean profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
-            Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
+            //Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
             if(profesorBuscado == true){
-                iProfesores.eliminarProfesor(iDProfesor, eliminarProfesor);
+                iProfesores.eliminarProfesor(iDProfesor);
                 notificarMensaje.mostrarMensaje("Profesor eliminado");         
             }
         } catch (Exception e) {
@@ -94,11 +107,13 @@ public class ControladorProfesores {
             String cedulaProfesor = vistaProfesor.getCedula();
             String correoInstitucionalProfesor = vistaProfesor.getCorreoInstitucional();
             double sueldoProfesor = Double.parseDouble(vistaProfesor.getSuledo());
+            String escalafonProfesor = vistaProfesor.getEscalafon();
+            Escalafon tipoEscalafon=identificarEscalafon(escalafonProfesor);
             // Escalafon escalafonProfesor = vistaProfesor.getEscalafon(); // si aplica
 
             
             Profesor profesorActualizado = new Profesor(
-                // escalafonProfesor,
+                tipoEscalafon,
                 sueldoProfesor,
                 correoInstitucionalProfesor,
                 nombreProfesor,

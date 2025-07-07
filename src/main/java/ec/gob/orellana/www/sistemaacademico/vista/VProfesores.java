@@ -17,13 +17,12 @@ import javax.swing.JComboBox;
 public class VProfesores extends javax.swing.JFrame {
 
     private ControladorProfesores controladorProfesor;
-    private JComboBox<Escalafon> combEscalafon = new JComboBox<>(Escalafon.values());
     private IProfesores iProfesores;
 
     public VProfesores() {
         initComponents();
         controladorProfesor = new ControladorProfesores(this);
-        add(combEscalafon);
+        
     }
 
     /**
@@ -105,7 +104,7 @@ public class VProfesores extends javax.swing.JFrame {
 
         jLabel1.setText("ID");
 
-        cmbEscalafon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ESCALAFON", "PRINCIPAL", "AGREGAR", "AUXILIAR" }));
+        cmbEscalafon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ESCALAFON", "PRINCIPAL", "AGREGADO", "AUXILIAR" }));
         cmbEscalafon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbEscalafonActionPerformed(evt);
@@ -274,7 +273,6 @@ public class VProfesores extends javax.swing.JFrame {
 
     private void btmBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBuscarActionPerformed
         controladorProfesor.procesoBuscarProfesor();
-
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBuscarActionPerformed
 
@@ -283,7 +281,7 @@ public class VProfesores extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btmActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmActualizarActionPerformed
-        controladorProfesor.procesoControladorActualizarProfesor();// TODO add your handling code here:
+        //controladorProfesor.procesoControladorActualizarProfesor();// TODO add your handling code here:
     }//GEN-LAST:event_btmActualizarActionPerformed
 
     private void btmEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmEliminarActionPerformed
@@ -326,8 +324,8 @@ public class VProfesores extends javax.swing.JFrame {
         return txtId.getText();
     }
 
-    public Escalafon getEscalafon() {
-        return (Escalafon) cmbEscalafon.getSelectedItem();
+    public String getEscalafon() {
+        return (String) cmbEscalafon.getSelectedItem();
     }
 
     public String getBuscar() {

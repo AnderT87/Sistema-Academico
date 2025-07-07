@@ -17,6 +17,7 @@ import ec.gob.orellana.www.sistemaacademico.personasinvitadas.IPersonasInvitadas
 import ec.gob.orellana.www.sistemaacademico.personasinvitadas.PersonasInvitadas;
 import ec.gob.orellana.www.sistemaacademico.personasservicios.IPersonasServicios;
 import ec.gob.orellana.www.sistemaacademico.personasservicios.PersonasServicios;
+import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
 import ec.gob.orellana.www.sistemaacademico.profesores.IProfesores;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesores;
 import ec.gob.orellana.www.sistemaacademico.vista.VProfesores;
@@ -101,10 +102,10 @@ public class SistemaAcademico {
         //Constructor
         IProfesores objProfesor = new Profesores(3);
      
-        Profesor profesorUno = new Profesor(/*Escalafon.AUXILIAR,*/2345,"Juan@espoch.edu.ec", "Juan",2, "juan@espoch.edu.ec", "220046735");
-        Profesor profesorDos = new Profesor(/*Escalafon.AUXILIAR,*/ 2756,"Alex@espoch.edu.ec", "Alex",5, "alex@espoch.edu.ec", "228872628");
+        Profesor profesorUno = new Profesor(Escalafon.AUXILIAR,2345,"Juan@espoch.edu.ec", "Juan",2, "juan@espoch.edu.ec", "220046735");
+        Profesor profesorDos = new Profesor(Escalafon.AUXILIAR, 2756,"Alex@espoch.edu.ec", "Alex",5, "alex@espoch.edu.ec", "228872628");
         
-        Profesor agregoProfesor = new Profesor(/*Escalafon.PRINCIPAL, */2345, "Josue@espoch.edu.ec", "Josue", 5, "josue@gmail.com", "22546738");
+        Profesor agregoProfesor = new Profesor(Escalafon.PRINCIPAL, 2345, "Josue@espoch.edu.ec", "Josue", 5, "josue@gmail.com", "22546738");
         
         //Metodos
         
@@ -114,13 +115,13 @@ public class SistemaAcademico {
         objProfesor.agregarProfesor(agregoProfesor);
         objProfesor.imprimirDatos();
         //Eliminar
-        Profesor eProfesor = new Profesor(/*null, */0, " ", " ", 0, " ", " ");
-        objProfesor.eliminarProfesor(2, eProfesor);
+        Profesor eProfesor = new Profesor(null,0, " ", " ", 0, " ", " ");
+        objProfesor.eliminarProfesor(2);
         objProfesor.imprimirDatos();
         
         //Actualizar
-        Profesor aProfesor = new Profesor(/*Escalafon.AGREGAR,*/ 2345, "Erick@gmail.com", "Erick", 1234, "Erick@gmail.com", "23876766");
-        objProfesor.eliminarProfesor(2, eProfesor);
+        Profesor aProfesor = new Profesor(Escalafon.AGREGADO, 2345, "Erick@gmail.com", "Erick", 1234, "Erick@gmail.com", "23876766");
+        objProfesor.eliminarProfesor(2);
         System.out.println(" ");
         
         //Buscar

@@ -235,7 +235,7 @@
           <StringArray count="4">
             <StringItem index="0" value="ESCALAFON"/>
             <StringItem index="1" value="PRINCIPAL"/>
-            <StringItem index="2" value="AGREGAR"/>
+            <StringItem index="2" value="AGREGADO"/>
             <StringItem index="3" value="AUXILIAR"/>
           </StringArray>
         </Property>

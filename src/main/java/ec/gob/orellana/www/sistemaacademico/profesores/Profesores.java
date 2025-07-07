@@ -35,10 +35,10 @@ public class Profesores implements IProfesores {
         }
     }
     
-    public boolean eliminarProfesor(int id,Profesor profesoress){
+    public boolean eliminarProfesor(int id){
         for (int i = 0; i < totalProfesores; i++){
-        profesores[i]= profesoress;
-            System.out.println("Cedula: "+profesores[i].getCedula());
+        profesores[i]= null;
+//            System.out.println("Cedula: "+profesores[i].getCedula());
             System.out.println("Profesor eliminado");
         return true;
         }
