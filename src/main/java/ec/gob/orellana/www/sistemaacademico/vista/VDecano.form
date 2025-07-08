@@ -39,7 +39,7 @@
                           <Component id="lblCedula" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblSueldo" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblEscalafon" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblNivelJerarquico" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -131,7 +131,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEscalafon" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblNivelJerarquico" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblEscalafonDos" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNivelJerarquico" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -272,7 +272,7 @@
         <Property name="text" type="java.lang.String" value="---------------------------------------------"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblEscalafon">
+    <Component class="javax.swing.JLabel" name="lblNivelJerarquico">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nivel jerarquico"/>
       </Properties>

@@ -24,10 +24,12 @@ public class PersonasInvitadas implements IPersonasInvitadas {
     
     public void imprimirDatos (){
         for (int i = 0; i < totalPersonasI; i++) {
+            System.out.println("-----Persona Invitada-------");
             System.out.println("Datos de la persona: " + personasInvitadas[i].getNombre());
-            System.out.println("" +  personasInvitadas[i].getCedula());
-            System.out.println("" + personasInvitadas[i].getCorreo());
-            System.out.println(""+ personasInvitadas[i].getId());
+            System.out.println("Cedula: " +  personasInvitadas[i].getCedula());
+            System.out.println("Correo: " + personasInvitadas[i].getCorreo());
+            System.out.println("ID:"+ personasInvitadas[i].getId());
+            System.out.println(" ");
         }
     }
     
@@ -40,16 +42,21 @@ public class PersonasInvitadas implements IPersonasInvitadas {
         return true;
     }
     
-    public boolean eliminarPersonaInvitada (int id, PersonaInvitada personaInvitada){
+    public boolean eliminarPersonaInvitada(int id) {
         for (int i = 0; i < totalPersonasI; i++) {
-            personasInvitadas [i]= personaInvitada;
-            System.out.println("Cedula" + personasInvitadas[i].getCedula());
-            System.out.println("Persona Eliminada");
-            return true;
+            if (personasInvitadas[i].getId() == id) {
+                // Reorganizar el arreglo para quitar el hueco
+                for (int j = i; j <  totalPersonasI - 1; j++) {
+                    personasInvitadas[j] = personasInvitadas[j + 1];
+                }
+                personasInvitadas[ totalPersonasI - 1] = null;
+                 totalPersonasI--;
+                System.out.println("Persona invitada eliminada");
+                return true;
+            }
         }
         return false;
     }
-    
     public boolean buscarPersonaInvitada(int id){
         for (int i = 0; i < totalPersonasI; i++){
             if(personasInvitadas[i].getId()==id){

@@ -22,7 +22,7 @@ public class VProfesores extends javax.swing.JFrame {
     public VProfesores() {
         initComponents();
         controladorProfesor = new ControladorProfesores(this);
-        
+
     }
 
     /**
@@ -273,6 +273,8 @@ public class VProfesores extends javax.swing.JFrame {
 
     private void btmBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBuscarActionPerformed
         controladorProfesor.procesoBuscarProfesor();
+        
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBuscarActionPerformed
 
@@ -285,7 +287,10 @@ public class VProfesores extends javax.swing.JFrame {
     }//GEN-LAST:event_btmActualizarActionPerformed
 
     private void btmEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmEliminarActionPerformed
-        controladorProfesor.procesoControladorEliminarProfesor();// TODO add your handling code here:
+        controladorProfesor.procesoControladorEliminarProfesor();
+        txtBuscar.setText(" ");
+        
+        // TODO add your handling code here:
     }//GEN-LAST:event_btmEliminarActionPerformed
 
     private void cmbEscalafonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEscalafonActionPerformed
@@ -293,7 +298,13 @@ public class VProfesores extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbEscalafonActionPerformed
 
     private void btmAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAgregarActionPerformed
-        controladorProfesor.procesoControladorProfesor();        // TODO add your handling code here:
+        controladorProfesor.procesoControladorProfesor(); 
+        txtNombre.setText(" ");
+        txtCedula.setText(" ");
+        txtCorreoInstitucional.setText(" ");
+        txtCorreoPersonal.setText(" ");
+        //txtId.setText(" ");
+        txtSueldo.setText(" ");// TODO add your handling code here:
     }//GEN-LAST:event_btmAgregarActionPerformed
 
     private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
@@ -331,8 +342,10 @@ public class VProfesores extends javax.swing.JFrame {
     public String getBuscar() {
         return txtBuscar.getText();
     }
-    
-    
+
+    public void setNombre(String nombre){
+        lblNombreDos.setText(nombre);
+    }
     /**
      * @param args the command line arguments
      */

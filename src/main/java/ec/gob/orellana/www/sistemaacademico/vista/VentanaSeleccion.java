@@ -40,9 +40,9 @@ public class VentanaSeleccion extends javax.swing.JFrame {
                     case "Profesor":
                         new VProfesores().setVisible(true);
                         break;
-                    /* case "Decano":
-                        new VentanaResumen().setVisible(true);
-                        break;*/
+                     case "Decano":
+                        new VDecano().setVisible(true);
+                        break;
                 }
             }
         });

@@ -36,7 +36,7 @@ public class ControladorProfesores {
         if("PRINCIPAL".equals(escalafon)){        
          tipo=Escalafon.PRINCIPAL;
         }else if("AGREGADO".equals(escalafon)){        
-        tipo=Escalafon.AGREGADO;
+        tipo=Escalafon.AUXILIAR;
         } 
         return tipo;
     }
@@ -74,6 +74,9 @@ public class ControladorProfesores {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
             boolean profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
+            if (profesorBuscado == true){
+                
+            }
             notificarMensaje.mostrarMensaje("Profesor encontrado");
            
             

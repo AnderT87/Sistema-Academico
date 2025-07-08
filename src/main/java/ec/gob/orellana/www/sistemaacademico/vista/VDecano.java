@@ -50,7 +50,7 @@ public class VDecano extends javax.swing.JFrame {
         lblSueldo = new javax.swing.JLabel();
         lblSueldoDos = new javax.swing.JLabel();
         lblEscalafonDos = new javax.swing.JLabel();
-        lblEscalafon = new javax.swing.JLabel();
+        lblNivelJerarquico = new javax.swing.JLabel();
         lblIdDos = new javax.swing.JLabel();
         lblDecano = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
@@ -127,7 +127,7 @@ public class VDecano extends javax.swing.JFrame {
 
         lblEscalafonDos.setText("---------------------------------------------");
 
-        lblEscalafon.setText("Nivel jerarquico");
+        lblNivelJerarquico.setText("Nivel jerarquico");
 
         lblIdDos.setText("---------------------------------------------");
 
@@ -165,7 +165,7 @@ public class VDecano extends javax.swing.JFrame {
                             .addComponent(lblCedula)
                             .addComponent(lblSueldo)
                             .addComponent(jLabel1)
-                            .addComponent(lblEscalafon))
+                            .addComponent(lblNivelJerarquico))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtId, javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +238,7 @@ public class VDecano extends javax.swing.JFrame {
                     .addComponent(lblSueldoDos))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEscalafon)
+                    .addComponent(lblNivelJerarquico)
                     .addComponent(lblEscalafonDos)
                     .addComponent(txtNivelJerarquico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -262,19 +262,19 @@ public class VDecano extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCedulaActionPerformed
 
     private void btmAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAgregarActionPerformed
-                // TODO add your handling code here:
+        controladorDecano.procesoControladorDecano();                // TODO add your handling code here:
     }//GEN-LAST:event_btmAgregarActionPerformed
 
     private void btmEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmEliminarActionPerformed
-       // TODO add your handling code here:
+        controladorDecano.procesoControladorEliminarProfesor();       // TODO add your handling code here:
     }//GEN-LAST:event_btmEliminarActionPerformed
 
     private void btmActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmActualizarActionPerformed
-       // TODO add your handling code here:
+        controladorDecano.procesoControladorActualizarProfesor();       // TODO add your handling code here:
     }//GEN-LAST:event_btmActualizarActionPerformed
 
     private void btmBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBuscarActionPerformed
-        
+    controladorDecano.procesoBuscarDecano();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBuscarActionPerformed
@@ -318,6 +318,13 @@ public class VDecano extends javax.swing.JFrame {
         return txtId.getText();
     }
 
+    public String getNivelJerarquico(){
+        return txtNivelJerarquico.getText();
+    }
+    
+    public String getBuscar(){
+        return txtBuscar.getText();
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmActualizar;
     private javax.swing.JButton btmAgregar;
@@ -332,9 +339,9 @@ public class VDecano extends javax.swing.JFrame {
     private javax.swing.JLabel lblCorreoPersonal;
     private javax.swing.JLabel lblCorreoPersonalDos;
     private javax.swing.JLabel lblDecano;
-    private javax.swing.JLabel lblEscalafon;
     private javax.swing.JLabel lblEscalafonDos;
     private javax.swing.JLabel lblIdDos;
+    private javax.swing.JLabel lblNivelJerarquico;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNombreDos;
     private javax.swing.JLabel lblSueldo;

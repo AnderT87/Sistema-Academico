@@ -57,9 +57,11 @@ public class ControladorPersonaInvitada {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
             boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            notificarMensaje.mostrarMensaje("Persona encontrada");
+            if(PersonaBuscada == true){
+                notificarMensaje.mostrarMensaje("Persona encontrada");
+            }   
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Persona no encontrada");
+            notificarMensaje.mostrarMensaje("Error al buscar la persona");
         }
     }
     
@@ -67,13 +69,15 @@ public class ControladorPersonaInvitada {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
             boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            PersonaInvitada eliminarPersonaInvitada = new PersonaInvitada("", 2, "", "", "");
+            //PersonaInvitada eliminarPersonaInvitada = new PersonaInvitada("", 2, "", "", "");
             if (PersonaBuscada == true) {
-                iPersonasInvitadas.eliminarPersonaInvitada(idPersonaInvitada, eliminarPersonaInvitada);
+                iPersonasInvitadas.eliminarPersonaInvitada(idPersonaInvitada);
                 notificarMensaje.mostrarMensaje("Persona Eliminada");
-            }
+            }else{
+                
+            }notificarMensaje.mostrarMensaje("Error al eliminar a la persona");
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Error al eliminar a la persona");
+            notificarMensaje.mostrarMensaje("Error");
         }
     }
     

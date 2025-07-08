@@ -14,7 +14,7 @@ import ec.gob.orellana.www.sistemaacademico.personasinvitadas.IPersonasInvitadas
 public class VPersonasInvitadas extends javax.swing.JFrame {
     
     private ControladorPersonaInvitada controladorPersonaInvitada;
-    private IPersonasInvitadas iPersonasInvitadas;
+    
     
     public VPersonasInvitadas() {
         initComponents();

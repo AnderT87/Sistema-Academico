@@ -145,7 +145,7 @@ public class SistemaAcademico {
         System.out.println("------DATOS ELIMINADOS------");
         //Metodo Eliminar Decano 
         Decano EliminarD = new Decano (" ", 0, " ", " ", 0, " ", " ");
-        objDecano.eliminarDecano(1, EliminarD);
+        objDecano.eliminarDecano(1);
         objDecano.imprimirDatos(); 
     }
 }
