@@ -56,6 +56,7 @@ public class VDecano extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         txtCorreoPersonal = new javax.swing.JTextField();
         txtNivelJerarquico = new javax.swing.JTextField();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,6 +147,13 @@ public class VDecano extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -187,18 +195,19 @@ public class VDecano extends javax.swing.JFrame {
                     .addComponent(lblIdDos))
                 .addGap(76, 76, 76))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblDecano, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(280, 280, 280))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(214, 214, 214))))
+                .addContainerGap(369, Short.MAX_VALUE)
+                .addComponent(lblDecano, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(280, 280, 280))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(133, 133, 133)
+                .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLimpiar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,12 +255,13 @@ public class VDecano extends javax.swing.JFrame {
                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(lblIdDos))
-                .addGap(74, 74, 74)
+                .addGap(76, 76, 76)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmAgregar)
                     .addComponent(btmEliminar)
-                    .addComponent(btmActualizar))
-                .addContainerGap(80, Short.MAX_VALUE))
+                    .addComponent(btmActualizar)
+                    .addComponent(btnLimpiar))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         pack();
@@ -290,6 +300,17 @@ public class VDecano extends javax.swing.JFrame {
     private void txtNivelJerarquicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNivelJerarquicoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNivelJerarquicoActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtNombre.setText(null);
+        txtCedula.setText(null);
+        txtNivelJerarquico.setText(null);
+        txtCorreoInstitucional.setText(null);
+        txtId.setText(null);
+        txtCorreoPersonal.setText(null);
+        txtSueldo.setText(null);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,6 +351,7 @@ public class VDecano extends javax.swing.JFrame {
     private javax.swing.JButton btmAgregar;
     private javax.swing.JButton btmBuscar;
     private javax.swing.JButton btmEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblCedula;

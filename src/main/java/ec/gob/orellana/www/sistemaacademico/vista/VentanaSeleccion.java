@@ -28,9 +28,9 @@ public class VentanaSeleccion extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 String seleccion = (String) cmbEleccion.getSelectedItem();
                 switch (seleccion) {
-                    /*case "Personal de servicio":
-                        new VentanaInicio().setVisible(true);
-                        break;*/
+                    case "Personal Servicio":
+                        new VPersonasServicios().setVisible(true);
+                        break;
                     case "Persona Invitada":
                         new VPersonasInvitadas().setVisible(true);
                         break;
@@ -66,7 +66,7 @@ public class VentanaSeleccion extends javax.swing.JFrame {
         txtRol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtRol.setText("Elija su rol en la institucion");
 
-        cmbEleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Personal de Servico", "Persona Invitada", "Estudiante", "Profesor", "Decano" }));
+        cmbEleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Personal Servicio", "Persona Invitada", "Estudiante", "Profesor", "Decano" }));
         cmbEleccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbEleccionActionPerformed(evt);

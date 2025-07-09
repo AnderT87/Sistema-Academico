@@ -53,6 +53,7 @@ public class VEstudiantes extends javax.swing.JFrame {
         btmEliminar = new javax.swing.JButton();
         lblCorreoInstitucionalDos = new javax.swing.JLabel();
         lblCorreoInstitucional = new javax.swing.JLabel();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,14 +142,17 @@ public class VEstudiantes extends javax.swing.JFrame {
 
         lblCorreoInstitucional.setText("Correo Institucional");
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(330, Short.MAX_VALUE)
-                .addComponent(lblEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(278, 278, 278))
             .addGroup(layout.createSequentialGroup()
                 .addGap(167, 167, 167)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -161,6 +165,15 @@ public class VEstudiantes extends javax.swing.JFrame {
                         .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(330, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(278, 278, 278))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnLimpiar)
+                        .addGap(61, 61, 61))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,19 +188,14 @@ public class VEstudiantes extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addGap(27, 27, 27)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblCedula)
-                                        .addComponent(lblNivelJerarquico)
-                                        .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblCorreoInstitucional)
-                                        .addComponent(lblCorreoPersonal)
-                                        .addComponent(lblNombre)
-                                        .addComponent(btmBuscar))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(lblCedula)
+                                .addComponent(lblNivelJerarquico)
+                                .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCorreoInstitucional)
+                                .addComponent(lblCorreoPersonal)
+                                .addComponent(lblNombre)
+                                .addComponent(btmBuscar))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(lblDatosEstudiantes)
                                 .addComponent(lblNombreDos)
@@ -220,7 +228,9 @@ public class VEstudiantes extends javax.swing.JFrame {
                 .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addComponent(btnLimpiar)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(66, Short.MAX_VALUE)
@@ -298,6 +308,16 @@ public class VEstudiantes extends javax.swing.JFrame {
         controladorEstudiante.procesoControladorEliminarEstudiantes();             // TODO add your handling code here:
     }//GEN-LAST:event_btmEliminarActionPerformed
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtNombre.setText(null);
+        txtCedula.setText(null);
+        txtCodigo.setText(null);
+        txtCorreoInstitucional.setText(null);
+        txtId.setText(null);
+        txtCorreoPersonal.setText(null);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
     public String getNombre(){
         return txtNombre.getText();
     }
@@ -332,6 +352,7 @@ public class VEstudiantes extends javax.swing.JFrame {
     private javax.swing.JButton btmAgregar;
     private javax.swing.JButton btmBuscar;
     private javax.swing.JButton btmEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel lblCedula;
     private javax.swing.JLabel lblCedulaD;
     private javax.swing.JLabel lblCodigo;

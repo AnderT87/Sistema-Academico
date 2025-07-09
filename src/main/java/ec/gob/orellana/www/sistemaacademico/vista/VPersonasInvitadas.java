@@ -52,6 +52,7 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
         lblDescripcionDos = new javax.swing.JLabel();
         txtBuscar = new javax.swing.JTextField();
         txtCedu = new javax.swing.JTextField();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,12 +129,32 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(225, 225, 225))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(btnAgregar)
+                        .addGap(68, 68, 68)
+                        .addComponent(btnEliminar)
+                        .addGap(74, 74, 74)
+                        .addComponent(btnActualizar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiar))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -167,19 +188,8 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
                                     .addComponent(lblCorreoDos)
                                     .addComponent(lblCedulaDos)
                                     .addComponent(lblDescripcionDos))
-                                .addGap(58, 58, 58))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(btnAgregar)
-                        .addGap(68, 68, 68)
-                        .addComponent(btnEliminar)
-                        .addGap(74, 74, 74)
-                        .addComponent(btnActualizar)))
-                .addContainerGap(107, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(225, 225, 225))
+                                .addGap(58, 58, 58)))))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,7 +234,8 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnEliminar)
-                    .addComponent(btnActualizar))
+                    .addComponent(btnActualizar)
+                    .addComponent(btnLimpiar))
                 .addGap(30, 30, 30))
         );
 
@@ -251,6 +262,7 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
         controladorPersonaInvitada.procesoControladorPersonaInvitada();
+        
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -262,6 +274,14 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
         // TODO add your handling code here:
         controladorPersonaInvitada.procesoActualizarPersona();
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtNombre.setText(null);
+        txtCorreo.setText(null);
+        txtCedu.setText(null);
+        txtDescripcion.setText(null);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,6 +316,7 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel lblCedula;

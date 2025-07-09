@@ -42,6 +42,7 @@ public class ControladorPersonaInvitada {
                     cedulaPersonaInvitada,
                     descripcionPersonaInvitada
             );
+
             boolean agregar = iPersonasInvitadas.agregarpersonaInvitada(nuevaPersonaInvitada);
             if (agregar == true) {
                 notificarMensaje.mostrarMensaje("Persona Agregada exitosamente");
@@ -52,64 +53,64 @@ public class ControladorPersonaInvitada {
             notificarMensaje.mostrarMensaje("Error al agregar a la persona");
         }
     }
-    
-    public void procesoBuscarPersona(){
+
+    public void procesoBuscarPersona() {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
             boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            if(PersonaBuscada == true){
+            if (PersonaBuscada == true) {
                 notificarMensaje.mostrarMensaje("Persona encontrada");
-            }   
+            } else {
+                notificarMensaje.mostrarMensaje("Persona no encontrada");
+            }
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Error al buscar la persona");
+            notificarMensaje.mostrarMensaje("Error en el codigo");
         }
     }
-    
-    public void procesoEliminarPersona(){
+
+    public void procesoEliminarPersona() {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
             boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            //PersonaInvitada eliminarPersonaInvitada = new PersonaInvitada("", 2, "", "", "");
+            //Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
             if (PersonaBuscada == true) {
                 iPersonasInvitadas.eliminarPersonaInvitada(idPersonaInvitada);
                 notificarMensaje.mostrarMensaje("Persona Eliminada");
-            }else{
-                
-            }notificarMensaje.mostrarMensaje("Error al eliminar a la persona");
+            }
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Error");
+            notificarMensaje.mostrarMensaje("Error al eliminar a la Persona Invitada");
         }
     }
-    
-    public void procesoActualizarPersona (){
+
+    public void procesoActualizarPersona() {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
-            
+
             boolean x = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
             if (x) {
-            String nombrePersonaInvitada = vistaPersonaInvitada.getNombre();
-            String correoPersonaInvitada = vistaPersonaInvitada.getCorreo();
-            String cedulaPersonaInvitada = vistaPersonaInvitada.getCedula();
-            String descripcionPersonaInvitada = vistaPersonaInvitada.getDescripcion();
-            
-            PersonaInvitada personaActualizada = new PersonaInvitada(
-                    nombrePersonaInvitada,
-                    idPersonaInvitada,
-                    correoPersonaInvitada,
-                    cedulaPersonaInvitada,
-                    descripcionPersonaInvitada);
-            iPersonasInvitadas.actualizarPersonaInvitada(idPersonaInvitada, personaActualizada);
-            notificarMensaje.mostrarMensaje("Informacion actualizada correctamente");
-            }else{
-                notificarMensaje.mostrarMensaje("No se encontro persona con ID" + idPersonaInvitada);
+                String nombrePersonaInvitada = vistaPersonaInvitada.getNombre();
+                String correoPersonaInvitada = vistaPersonaInvitada.getCorreo();
+                String cedulaPersonaInvitada = vistaPersonaInvitada.getCedula();
+                String descripcionPersonaInvitada = vistaPersonaInvitada.getDescripcion();
+
+                PersonaInvitada personaActualizada = new PersonaInvitada(
+                        nombrePersonaInvitada,
+                        idPersonaInvitada,
+                        correoPersonaInvitada,
+                        cedulaPersonaInvitada,
+                        descripcionPersonaInvitada);
+                iPersonasInvitadas.actualizarPersonaInvitada(idPersonaInvitada, personaActualizada);
+                notificarMensaje.mostrarMensaje("Informacion actualizada correctamente");
+
+            } else {
+                notificarMensaje.mostrarMensaje("No se encontró profesor con ID: " + idPersonaInvitada);
             }
         } catch (NumberFormatException ex) {
-            notificarMensaje.mostrarMensaje("ID invalido");
-        } catch(Exception e){
+            notificarMensaje.mostrarMensaje("ID invalido. Verifica los datos numéricos.");
+        } catch (Exception e) {
             e.printStackTrace();
-            notificarMensaje.mostrarMensaje("Error al actualizar a la persona");
+            notificarMensaje.mostrarMensaje("Error al actualizar a la persona invitada");
         }
     }
-    
 
 }

@@ -29,6 +29,7 @@ public class PersonasInvitadas implements IPersonasInvitadas {
             System.out.println("Cedula: " +  personasInvitadas[i].getCedula());
             System.out.println("Correo: " + personasInvitadas[i].getCorreo());
             System.out.println("ID:"+ personasInvitadas[i].getId());
+            System.out.println("Descripcion : " + personasInvitadas[i].getDescripcion());
             System.out.println(" ");
         }
     }
@@ -63,11 +64,10 @@ public class PersonasInvitadas implements IPersonasInvitadas {
                 imprimirDatos();
                 return true;
             }else{
-                System.out.println("Codigo erroneo");
+                System.out.println("");
                 return false;
             }
         }
         return false;
     }
-    
 }

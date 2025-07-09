@@ -67,21 +67,20 @@
               <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="369" max="32767" attributes="0"/>
+              <Component id="lblDecano" min="-2" pref="126" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+              <Component id="btmAgregar" min="-2" pref="104" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btmEliminar" min="-2" pref="110" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btmActualizar" min="-2" pref="114" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="lblDecano" min="-2" pref="126" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="btmAgregar" min="-2" pref="104" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btmEliminar" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btmActualizar" min="-2" pref="114" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -141,13 +140,14 @@
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblIdDos" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btmAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btmEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btmActualizar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <EmptySpace pref="78" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -300,6 +300,14 @@
     <Component class="javax.swing.JTextField" name="txtNivelJerarquico">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNivelJerarquicoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnLimpiar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limpiar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

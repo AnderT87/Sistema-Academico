@@ -63,6 +63,7 @@ public class VProfesores extends javax.swing.JFrame {
         lblSueldoDos = new javax.swing.JLabel();
         lblEscalafonDos = new javax.swing.JLabel();
         lblIdDos = new javax.swing.JLabel();
+        btnLimpiar = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -156,6 +157,13 @@ public class VProfesores extends javax.swing.JFrame {
 
         lblIdDos.setText("---------------------------------------------");
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -197,18 +205,19 @@ public class VProfesores extends javax.swing.JFrame {
                     .addComponent(lblIdDos))
                 .addGap(76, 76, 76))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(280, 280, 280))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(214, 214, 214))))
+                .addContainerGap(396, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(280, 280, 280))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(btnLimpiar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,7 +269,8 @@ public class VProfesores extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmAgregar)
                     .addComponent(btmEliminar)
-                    .addComponent(btmActualizar))
+                    .addComponent(btmActualizar)
+                    .addComponent(btnLimpiar))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -311,6 +321,16 @@ public class VProfesores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBuscarActionPerformed
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtNombre.setText(null);
+        txtCedula.setText(null);
+        txtCorreoInstitucional.setText(null);
+        txtId.setText(null);
+        txtCorreoPersonal.setText(null);
+        txtSueldo.setText(null);
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
     public String getNombreProfesor() {
         return txtNombre.getText();
     }
@@ -355,6 +375,7 @@ public class VProfesores extends javax.swing.JFrame {
     private javax.swing.JButton btmAgregar;
     private javax.swing.JButton btmBuscar;
     private javax.swing.JButton btmEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbEscalafon;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
