@@ -25,20 +25,51 @@ public class Estudiantes implements IEstudiantes {
     public void imprimirDato (){
         for (int i =0; i< totalEstudiantes; i++){
             System.out.println("------Estudiante------"+"|"+(i+1)+"|");
-            System.out.println("Datos del Estudiante: "+ estudiantes[i].getCodigo());
+            System.out.println("Nombre del estudiante: "+estudiantes[i].getNombre());
+            System.out.println("Cedula del estudiante: "+estudiantes[i].getCedula());
+            System.out.println("Correo personal del estudiante: "+estudiantes[i].getCorreo());
+            System.out.println("Correo institucional del estudiante: "+estudiantes[i].getCorreoInstitucional());
+            System.out.println("Codigo del estudiante: "+ estudiantes[i].getCodigo());
+            System.out.println("ID del estudiante: "+estudiantes[i].getId());
+            System.out.println(" ");
         }
     }
         
-    @Override
-    public boolean eliminarEstudiante (int i, Estudiante estudiante){
-        estudiantes [i]= estudiante; 
-        return true; 
+    
+    public boolean eliminarEstudiante(int id) {
+        for (int i = 0; i < totalEstudiantes; i++) {
+            if (estudiantes[i].getId() == id) {
+                // Reorganizar el arreglo para quitar el hueco
+                for (int j = i; j < totalEstudiantes - 1; j++) {
+                    estudiantes[j] = estudiantes[j + 1];
+                }
+                estudiantes[totalEstudiantes - 1] = null;
+                totalEstudiantes--;
+                System.out.println("Estudiante eliminado");
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean buscarEstudiante(int id) {
+        for (int i = 0; i < totalEstudiantes ; i++) {
+            if (estudiantes[i].getId() == id) {
+                return true;
+            }
+        }
+        System.out.println("Codigo no encontrado");
+        return false;
     }
     
     @Override
-    public boolean actualizarEstudiante (int i, Estudiante estudiante){
-        estudiantes [i] = estudiante;     
-        return true; 
+    public boolean actualizarEstudiante (int id, Estudiante estudiante){
+        for(int i = 0; i < totalEstudiantes ; i++){
+            estudiantes [i] = estudiante; 
+            imprimirDato();
+            return true; 
+        }
+        return false;
     }
 
     

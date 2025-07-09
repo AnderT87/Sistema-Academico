@@ -78,10 +78,10 @@ public class ControladorDecano {
             //Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
             if (profesorBuscado == true) {
                 iDecano.eliminarDecano(idDecano);
-                notificarMensaje.mostrarMensaje("Profesor eliminado");
+                notificarMensaje.mostrarMensaje("Decano eliminado");
             }
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Error al eliminar el Profesor");
+            notificarMensaje.mostrarMensaje("Error al eliminar el Decano");
         }
     }
 
@@ -113,7 +113,7 @@ public class ControladorDecano {
                 notificarMensaje.mostrarMensaje("Profesor actualizado con éxito");
 
             } else {
-                notificarMensaje.mostrarMensaje("No se encontró profesor con ID: " + iDProfesor);
+                notificarMensaje.mostrarMensaje("No se encontró el decano con ID: " + iDProfesor);
             }
 
         } catch (NumberFormatException ex) {

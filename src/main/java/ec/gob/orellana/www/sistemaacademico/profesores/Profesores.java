@@ -25,6 +25,7 @@ public class Profesores implements IProfesores {
     public void imprimirDatos() {
         for (int i = 0; i < totalProfesores; i++) {
             if (profesores[i] != null) {
+                System.out.println("------PROFESOR------"+"|"+(i+1)+"|");
                 System.out.println("Datos del profesor :" + profesores[i].getNombre());
                 System.out.println("Correo del profesor: " + profesores[i].getCorreoInstitucional());
                 System.out.println("Correo Personal:" + profesores[i].getCorreo());
@@ -67,13 +68,6 @@ public class Profesores implements IProfesores {
     public boolean buscarProfesor(int id) {
         for (int i = 0; i < totalProfesores; i++) {
             if (profesores[i].getId() == id) {
-                System.out.println("Datos del profesor :" + profesores[i].getNombre());
-                System.out.println("Correo del profesor: " + profesores[i].getCorreoInstitucional());
-                System.out.println("Correo Personal:" + profesores[i].getCorreo());
-                System.out.println("Cedula del Profesor: " + profesores[i].getCedula());
-                System.out.println("El sueldo que recibe es de :" + profesores[i].getSueldo());
-                System.out.println("Escalafon: " + profesores[i].getEscalafon());
-                System.out.println("El id del profesor es el siguiente: " + profesores[i].getId());
                 return true;
             }
         }

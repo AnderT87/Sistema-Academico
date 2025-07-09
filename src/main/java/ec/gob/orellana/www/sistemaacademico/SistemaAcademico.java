@@ -40,7 +40,7 @@ public class SistemaAcademico {
         */
         
         //CLASE PERSONA INVITADA
-        System.out.println("---PERSONA INVITADA---");
+        /*
         IPersonasInvitadas objPersonaInvitada  = new PersonasInvitadas(2); 
         
         PersonaInvitada PersonaUno = new PersonaInvitada("Alexis", 5380, " alexisyasacama@gmail.com ", "2250180862", "Estudiante de la ESPOCH");
@@ -75,7 +75,7 @@ public class SistemaAcademico {
         System.out.println("------DATOS ELIMINADOS------");
         //Metodo Eliminar estudiante
         Estudiante EliminarE = new Estudiante (0, " ", " ", 0, " ", " ");
-        objEstudiante.eliminarEstudiante(2, EliminarE);
+        objEstudiante.eliminarEstudiante(2);
         objEstudiante.imprimirDato();
         System.out.println(" ");
         
@@ -146,6 +146,6 @@ public class SistemaAcademico {
         //Metodo Eliminar Decano 
         Decano EliminarD = new Decano (" ", 0, " ", " ", 0, " ", " ");
         objDecano.eliminarDecano(1);
-        objDecano.imprimirDatos(); 
+        objDecano.imprimirDatos(); */
     }
 }

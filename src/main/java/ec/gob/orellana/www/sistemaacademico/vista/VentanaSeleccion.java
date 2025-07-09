@@ -34,9 +34,9 @@ public class VentanaSeleccion extends javax.swing.JFrame {
                     case "Persona Invitada":
                         new VPersonasInvitadas().setVisible(true);
                         break;
-                    /*case "Estudiante":
-                        new VentanaResumen().setVisible(true);
-                        break;*/
+                    case "Estudiante":
+                        new VEstudiantes().setVisible(true);
+                        break;
                     case "Profesor":
                         new VProfesores().setVisible(true);
                         break;
