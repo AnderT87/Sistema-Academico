@@ -4,6 +4,8 @@
  */
 package ec.gob.orellana.www.sistemaacademico.decanos;
 
+import ec.gob.orellana.www.sistemaacademico.profesores.Profesor;
+
 /**
  *
  * @author SO-LAB-PC6
@@ -71,20 +73,13 @@ public class Decanos implements IDecanos {
         return false;
     }
 
-    public boolean buscarProfesor(int id) {
+    public Decano buscarDecano(int id) {
         for (int i = 0; i < totalDecanos; i++) {
-            if (decanos[i].getId() == id) {
-                System.out.println("Datos del profesor :" + decanos[i].getNombre());
-                System.out.println("Correo del profesor: " + decanos[i].getCorreoInstitucional());
-                System.out.println("Correo Personal:" + decanos[i].getCorreo());
-                System.out.println("Cedula del Profesor: " + decanos[i].getCedula());
-                System.out.println("El sueldo que recibe es de :" + decanos[i].getSueldo());
-                System.out.println("El id del profesor es el siguiente: " + decanos[i].getId());
-                return true;
+            if (decanos[i] != null && decanos[i].getId() == id) {
+                return decanos[i];
             }
         }
-        System.out.println("Codigo no encontrado");
-        return false;
+        return null;
     }
 
 }

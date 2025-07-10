@@ -11,6 +11,7 @@ import ec.gob.orellana.www.sistemaacademico.profesores.Escalafon;
 import ec.gob.orellana.www.sistemaacademico.profesores.Profesor;
 import ec.gob.orellana.www.sistemaacademico.vista.NotificadorMensaje;
 import ec.gob.orellana.www.sistemaacademico.vista.VEstudiantes;
+import java.util.Set;
 
 public class ControladorEstudiante {
 
@@ -45,6 +46,7 @@ public class ControladorEstudiante {
             if (agregar == true) {
                 notificadorMensaje.mostrarMensaje("Estudiante Agregado Exito");
                 iEstudiantes.imprimirDato();
+                
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,22 +57,30 @@ public class ControladorEstudiante {
     public void procesoBuscarEstudiantes() {
         try {
             int iDEstudiante = Integer.parseInt(vistaEstudiantes.getBuscar());
-            boolean profesorBuscado = iEstudiantes.buscarEstudiante(iDEstudiante);
-            if (profesorBuscado == true) {
+            Estudiante estudianteBuscado = iEstudiantes.buscarEstudiante(iDEstudiante);
+            if (estudianteBuscado != null) {
                  notificadorMensaje.mostrarMensaje("Estudiante encontrado");
+                 vistaEstudiantes.setCedula(estudianteBuscado.getCedula());
+                 vistaEstudiantes.setCodigo(String.valueOf(estudianteBuscado.getCodigo()));
+                 vistaEstudiantes.setCorreo(estudianteBuscado.getCorreo());
+                 vistaEstudiantes.setCorreoI(estudianteBuscado.getCorreoInstitucional());
+                 vistaEstudiantes.setId(String.valueOf(estudianteBuscado.getId()));
+                 vistaEstudiantes.setNombre(estudianteBuscado.getNombre());
+                
+                
             }else{
                 notificadorMensaje.mostrarMensaje("Estudiante no encontrado");
             }
         } catch (Exception e) {
-            notificadorMensaje.mostrarMensaje("Error al buscar el estudiante verifique que el codigo est correcto");
+            notificadorMensaje.mostrarMensaje("Error al buscar el estudiante verifique que el codigo este correcto");
         }
     }
 
     public void procesoControladorEliminarEstudiantes() {
         try {
             int iDEstudiante = Integer.parseInt(vistaEstudiantes.getBuscar());
-            boolean profesorBuscado = iEstudiantes.buscarEstudiante(iDEstudiante);
-            if (profesorBuscado == true) {
+            Estudiante estudianteBuscado = iEstudiantes.buscarEstudiante(iDEstudiante);
+            if (estudianteBuscado != null) {
                 iEstudiantes.eliminarEstudiante(iDEstudiante);
                 notificadorMensaje.mostrarMensaje("Estudiante eliminado");
             }
@@ -83,8 +93,8 @@ public class ControladorEstudiante {
         try {
             int idEstudiante = Integer.parseInt(vistaEstudiantes.getBuscar());
 
-            boolean existe = iEstudiantes.buscarEstudiante(idEstudiante);
-            if (existe) {
+            Estudiante estudianteBuscado = iEstudiantes.buscarEstudiante(idEstudiante);
+            if (estudianteBuscado != null) {
                 String nombreEstudiante = vistaEstudiantes.getNombre();
                 String correoPersonalEstudiante = vistaEstudiantes.getCorreoPersonal();
                 String cedulaEstudiante = vistaEstudiantes.getCedula();

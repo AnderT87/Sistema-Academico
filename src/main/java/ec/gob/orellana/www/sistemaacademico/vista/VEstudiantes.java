@@ -28,8 +28,7 @@ public class VEstudiantes extends javax.swing.JFrame {
     private void initComponents() {
 
         lblCodigo = new javax.swing.JLabel();
-        lblSueldoDos = new javax.swing.JLabel();
-        lblEscalafonDos = new javax.swing.JLabel();
+        lblCodigoDos = new javax.swing.JLabel();
         lblNivelJerarquico = new javax.swing.JLabel();
         lblIdDos = new javax.swing.JLabel();
         lblEstudiante = new javax.swing.JLabel();
@@ -44,7 +43,7 @@ public class VEstudiantes extends javax.swing.JFrame {
         lblNombre = new javax.swing.JLabel();
         lblCorreoPersonalDos = new javax.swing.JLabel();
         lblCorreoPersonal = new javax.swing.JLabel();
-        lblCedulaD = new javax.swing.JLabel();
+        lblCedulaDos = new javax.swing.JLabel();
         lblCedula = new javax.swing.JLabel();
         txtCedula = new javax.swing.JTextField();
         txtCorreoInstitucional = new javax.swing.JTextField();
@@ -59,9 +58,7 @@ public class VEstudiantes extends javax.swing.JFrame {
 
         lblCodigo.setText("Codigo");
 
-        lblSueldoDos.setText("---------------------------------------------");
-
-        lblEscalafonDos.setText("---------------------------------------------");
+        lblCodigoDos.setText("---------------------------------------------");
 
         lblNivelJerarquico.setText("ID");
 
@@ -114,7 +111,7 @@ public class VEstudiantes extends javax.swing.JFrame {
 
         lblCorreoPersonal.setText("Correo Personal");
 
-        lblCedulaD.setText("---------------------------------------------");
+        lblCedulaDos.setText("---------------------------------------------");
 
         lblCedula.setText("Cedula");
 
@@ -154,7 +151,12 @@ public class VEstudiantes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(167, 167, 167)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCorreoInstitucional)
+                    .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNivelJerarquico))
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -164,7 +166,20 @@ public class VEstudiantes extends javax.swing.JFrame {
                         .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblCedulaDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCorreoInstitucionalDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCorreoPersonalDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(32, 32, 32))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblIdDos)
+                            .addComponent(lblCodigoDos)
+                            .addComponent(lblNombreDos, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(330, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,37 +190,24 @@ public class VEstudiantes extends javax.swing.JFrame {
                         .addComponent(btnLimpiar)
                         .addGap(61, 61, 61))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGap(205, 205, 205)
+                    .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(165, 165, 165))
                 .addGroup(layout.createSequentialGroup()
+                    .addGap(27, 27, 27)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(205, 205, 205)
-                            .addComponent(btmAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btmEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btmActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(138, 138, 138))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(27, 27, 27)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblCedula)
-                                .addComponent(lblNivelJerarquico)
-                                .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblCorreoInstitucional)
-                                .addComponent(lblCorreoPersonal)
-                                .addComponent(lblNombre)
-                                .addComponent(btmBuscar))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblDatosEstudiantes)
-                                .addComponent(lblNombreDos)
-                                .addComponent(lblCorreoPersonalDos)
-                                .addComponent(lblCedulaD)
-                                .addComponent(lblCorreoInstitucionalDos)
-                                .addComponent(lblSueldoDos)
-                                .addComponent(lblEscalafonDos)
-                                .addComponent(lblIdDos))))
-                    .addGap(27, 27, 27)))
+                        .addComponent(lblCedula)
+                        .addComponent(lblCorreoPersonal)
+                        .addComponent(lblNombre)
+                        .addComponent(btmBuscar))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblDatosEstudiantes)
+                    .addGap(30, 30, 30)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,19 +217,35 @@ public class VEstudiantes extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34))
-                    .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(34, 34, 34))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCorreoPersonalDos)))
+                    .addComponent(lblNombreDos))
                 .addGap(18, 18, 18)
-                .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCedulaDos))
                 .addGap(18, 18, 18)
-                .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCorreoInstitucional)
+                    .addComponent(lblCorreoInstitucionalDos))
                 .addGap(18, 18, 18)
-                .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblCodigoDos))
+                    .addComponent(lblCodigo))
                 .addGap(18, 18, 18)
-                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNivelJerarquico)
+                    .addComponent(lblIdDos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(btnLimpiar)
                 .addContainerGap())
@@ -238,33 +256,12 @@ public class VEstudiantes extends javax.swing.JFrame {
                         .addComponent(btmBuscar)
                         .addComponent(lblDatosEstudiantes))
                     .addGap(35, 35, 35)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblNombre)
-                                .addComponent(lblNombreDos))
-                            .addGap(18, 18, 18)
-                            .addComponent(lblCorreoPersonal))
-                        .addComponent(lblCorreoPersonalDos))
+                    .addComponent(lblNombre)
                     .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblCedula)
-                        .addComponent(lblCedulaD))
+                    .addComponent(lblCorreoPersonal)
                     .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblCorreoInstitucional)
-                        .addComponent(lblCorreoInstitucionalDos))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblCodigo)
-                        .addComponent(lblSueldoDos))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblNivelJerarquico)
-                        .addComponent(lblEscalafonDos))
-                    .addGap(18, 18, 18)
-                    .addComponent(lblIdDos)
-                    .addGap(77, 77, 77)
+                    .addComponent(lblCedula)
+                    .addGap(213, 213, 213)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btmAgregar)
                         .addComponent(btmEliminar)
@@ -347,6 +344,29 @@ public class VEstudiantes extends javax.swing.JFrame {
     }
   
 
+    public void setNombre(String nombre){
+        lblNombreDos.setText(nombre);
+    }
+    
+    public void setCedula(String cedula){
+        lblCedulaDos.setText(cedula);
+    }
+    
+    public void setCodigo(String codigo){
+        lblCodigoDos.setText(codigo);
+    }
+    
+    public void setCorreoI(String CorreoI){
+        lblCorreoInstitucionalDos.setText(CorreoI);
+    }
+    
+    public void setCorreo(String correo){
+        lblCorreoPersonalDos.setText(correo);
+    }
+    
+    public void setId(String id){
+        lblIdDos.setText(id);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmActualizar;
     private javax.swing.JButton btmAgregar;
@@ -354,20 +374,19 @@ public class VEstudiantes extends javax.swing.JFrame {
     private javax.swing.JButton btmEliminar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel lblCedula;
-    private javax.swing.JLabel lblCedulaD;
+    private javax.swing.JLabel lblCedulaDos;
     private javax.swing.JLabel lblCodigo;
+    private javax.swing.JLabel lblCodigoDos;
     private javax.swing.JLabel lblCorreoInstitucional;
     private javax.swing.JLabel lblCorreoInstitucionalDos;
     private javax.swing.JLabel lblCorreoPersonal;
     private javax.swing.JLabel lblCorreoPersonalDos;
     private javax.swing.JLabel lblDatosEstudiantes;
-    private javax.swing.JLabel lblEscalafonDos;
     private javax.swing.JLabel lblEstudiante;
     private javax.swing.JLabel lblIdDos;
     private javax.swing.JLabel lblNivelJerarquico;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNombreDos;
-    private javax.swing.JLabel lblSueldoDos;
     private javax.swing.JTextField txtBuscar;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCodigo;

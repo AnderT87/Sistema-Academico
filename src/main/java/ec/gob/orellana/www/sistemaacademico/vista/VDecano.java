@@ -49,7 +49,7 @@ public class VDecano extends javax.swing.JFrame {
         lblCorreoInstitucional = new javax.swing.JLabel();
         lblSueldo = new javax.swing.JLabel();
         lblSueldoDos = new javax.swing.JLabel();
-        lblEscalafonDos = new javax.swing.JLabel();
+        lblNivelDos = new javax.swing.JLabel();
         lblNivelJerarquico = new javax.swing.JLabel();
         lblIdDos = new javax.swing.JLabel();
         lblDecano = new javax.swing.JLabel();
@@ -126,7 +126,7 @@ public class VDecano extends javax.swing.JFrame {
 
         lblSueldoDos.setText("---------------------------------------------");
 
-        lblEscalafonDos.setText("---------------------------------------------");
+        lblNivelDos.setText("---------------------------------------------");
 
         lblNivelJerarquico.setText("Nivel jerarquico");
 
@@ -160,16 +160,17 @@ public class VDecano extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblCorreoInstitucional)
-                    .addComponent(lblCorreoPersonal)
-                    .addComponent(lblNombre)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btmBuscar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNombre)
+                            .addComponent(lblCorreoInstitucional)
+                            .addComponent(lblCorreoPersonal)
                             .addComponent(lblCedula)
                             .addComponent(lblSueldo)
                             .addComponent(jLabel1)
@@ -180,10 +181,10 @@ public class VDecano extends javax.swing.JFrame {
                             .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCedula, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSueldo, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                            .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                            .addComponent(txtNivelJerarquico))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                            .addComponent(txtSueldo)
+                            .addComponent(txtCorreoPersonal)
+                            .addComponent(txtNivelJerarquico, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(lblNombreDos)
@@ -191,7 +192,7 @@ public class VDecano extends javax.swing.JFrame {
                     .addComponent(lblCedulaD)
                     .addComponent(lblCorreoInstitucionalDos)
                     .addComponent(lblSueldoDos)
-                    .addComponent(lblEscalafonDos)
+                    .addComponent(lblNivelDos)
                     .addComponent(lblIdDos))
                 .addGap(76, 76, 76))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -218,44 +219,54 @@ public class VDecano extends javax.swing.JFrame {
                     .addComponent(btmBuscar)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblNombre)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNombreDos))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblNombre)
+                                    .addComponent(lblNombreDos))
+                                .addGap(18, 18, 18)
+                                .addComponent(lblCorreoPersonal))
+                            .addComponent(lblCorreoPersonalDos))
                         .addGap(18, 18, 18)
-                        .addComponent(lblCorreoPersonal))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblCorreoPersonalDos)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCedula)
-                    .addComponent(lblCedulaD))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCorreoInstitucional)
-                    .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCorreoInstitucionalDos))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSueldo)
-                    .addComponent(lblSueldoDos))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNivelJerarquico)
-                    .addComponent(lblEscalafonDos)
-                    .addComponent(txtNivelJerarquico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblIdDos))
-                .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCedula)
+                            .addComponent(lblCedulaD))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCorreoInstitucional)
+                            .addComponent(lblCorreoInstitucionalDos))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblSueldo)
+                            .addComponent(lblSueldoDos))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNivelJerarquico)
+                            .addComponent(lblNivelDos))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(lblIdDos)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34))
+                            .addComponent(txtCorreoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCorreoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNivelJerarquico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btmAgregar)
                     .addComponent(btmEliminar)
@@ -315,7 +326,7 @@ public class VDecano extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public String getNombreProfesor() {
+    public String getNombre() {
         return txtNombre.getText();
     }
 
@@ -346,6 +357,35 @@ public class VDecano extends javax.swing.JFrame {
     public String getBuscar(){
         return txtBuscar.getText();
     }
+    
+    
+    public void setNombre(String nombre) {
+        lblNombreDos.setText(nombre);
+    }
+
+    public void setCorreoPersonal(String correo) {
+         lblCorreoPersonalDos.setText(correo);
+    }
+
+    public void setCedula(String cedula) {
+        lblCedulaD.setText(cedula);
+    }
+
+    public void setCorreoInstitucional(String correoI) {
+        lblCorreoInstitucionalDos.setText(correoI);
+    }
+
+    public void setSuledo(String sueldo) {
+        lblSueldoDos.setText(sueldo);
+    }
+
+    public void setId(String iD) {
+        lblIdDos.setText(iD);
+    }
+
+    public void setNivelJerarquico(String nivel){
+        lblNivelDos.setText(nivel);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmActualizar;
     private javax.swing.JButton btmAgregar;
@@ -361,8 +401,8 @@ public class VDecano extends javax.swing.JFrame {
     private javax.swing.JLabel lblCorreoPersonal;
     private javax.swing.JLabel lblCorreoPersonalDos;
     private javax.swing.JLabel lblDecano;
-    private javax.swing.JLabel lblEscalafonDos;
     private javax.swing.JLabel lblIdDos;
+    private javax.swing.JLabel lblNivelDos;
     private javax.swing.JLabel lblNivelJerarquico;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNombreDos;

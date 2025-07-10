@@ -58,16 +58,13 @@ public class PersonasInvitadas implements IPersonasInvitadas {
         }
         return false;
     }
-    public boolean buscarPersonaInvitada(int id){
-        for (int i = 0; i < totalPersonasI; i++){
-            if(personasInvitadas[i].getId()==id){
-                imprimirDatos();
-                return true;
-            }else{
-                System.out.println("");
-                return false;
-            }
+    
+    public PersonaInvitada buscarPersonaInvitada(int id) {
+    for (int i = 0; i < totalPersonasI; i++) {
+        if (personasInvitadas[i] != null && personasInvitadas[i].getId() == id) {
+            return personasInvitadas[i];
         }
-        return false;
+    }
+    return null;
     }
 }

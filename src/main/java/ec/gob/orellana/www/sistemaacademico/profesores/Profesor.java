@@ -20,15 +20,6 @@ public class Profesor extends PersonalAcademico{
     public Escalafon getEscalafon() {
         return escalafon;
     }
-   
-    public  void setCorreoInstitucional (){
-        
-        //supser.toString() = correoInstitucional;
-    }
-    public String getCorreoInstitucional (){
-        
-        return " ";
-    }
     
     @Override
     public String toString() {

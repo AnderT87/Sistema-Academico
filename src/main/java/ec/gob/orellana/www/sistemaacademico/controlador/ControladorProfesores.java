@@ -72,22 +72,31 @@ public class ControladorProfesores {
     public void procesoBuscarProfesor() {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
-            boolean profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
-            if (profesorBuscado == true) {
+            Profesor profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
+            if (profesorBuscado != null) {
+                notificarMensaje.mostrarMensaje("Profesor encontrado");
+                vistaProfesor.setNombre(profesorBuscado.getNombre());
+                vistaProfesor.setCorreoPersonalDos(profesorBuscado.getCorreo());
+                vistaProfesor.setCorreoInstitucionalDos(profesorBuscado.getCorreoInstitucional());
+                vistaProfesor.setCedulaD(profesorBuscado.getCedula());
+                vistaProfesor.setSueldoDos(String.valueOf(profesorBuscado.getSueldo()));
+                vistaProfesor.setEscalafonDos("" + profesorBuscado.getEscalafon());
 
+
+
+            } else {
+                notificarMensaje.mostrarMensaje("Profesor no encontrado");
             }
-            notificarMensaje.mostrarMensaje("Profesor encontrado");
-
         } catch (Exception e) {
-            notificarMensaje.mostrarMensaje("Profesor no encontrado");
+            notificarMensaje.mostrarMensaje("Error al buscar el Profesor ");
         }
     }
 
     public void procesoControladorEliminarProfesor() {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
-            boolean profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
-            if (profesorBuscado == true) {
+            Profesor profesorBuscado = iProfesores.buscarProfesor(iDProfesor);
+            if (profesorBuscado != null){
                 iProfesores.eliminarProfesor(iDProfesor);
                 notificarMensaje.mostrarMensaje("Profesor eliminado");
             }
@@ -100,8 +109,8 @@ public class ControladorProfesores {
         try {
             int iDProfesor = Integer.parseInt(vistaProfesor.getBuscar());
 
-            boolean existe = iProfesores.buscarProfesor(iDProfesor);
-            if (existe) {
+            Profesor existe = iProfesores.buscarProfesor(iDProfesor);
+            if (existe != null) {
                 String nombreProfesor = vistaProfesor.getNombreProfesor();
                 String correoPersonalProfesor = vistaProfesor.getCorreoPersonal();
                 String cedulaProfesor = vistaProfesor.getCedula();

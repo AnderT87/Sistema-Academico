@@ -17,7 +17,7 @@ import javax.swing.JComboBox;
 public class VProfesores extends javax.swing.JFrame {
 
     private ControladorProfesores controladorProfesor;
-    private IProfesores iProfesores;
+    
 
     public VProfesores() {
         initComponents();
@@ -283,8 +283,7 @@ public class VProfesores extends javax.swing.JFrame {
 
     private void btmBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmBuscarActionPerformed
         controladorProfesor.procesoBuscarProfesor();
-        
-        
+
         // TODO add your handling code here:
     }//GEN-LAST:event_btmBuscarActionPerformed
 
@@ -298,8 +297,8 @@ public class VProfesores extends javax.swing.JFrame {
 
     private void btmEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmEliminarActionPerformed
         controladorProfesor.procesoControladorEliminarProfesor();
-        txtBuscar.setText(" ");
         
+
         // TODO add your handling code here:
     }//GEN-LAST:event_btmEliminarActionPerformed
 
@@ -308,13 +307,8 @@ public class VProfesores extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbEscalafonActionPerformed
 
     private void btmAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAgregarActionPerformed
-        controladorProfesor.procesoControladorProfesor(); 
-        txtNombre.setText(" ");
-        txtCedula.setText(" ");
-        txtCorreoInstitucional.setText(" ");
-        txtCorreoPersonal.setText(" ");
-        //txtId.setText(" ");
-        txtSueldo.setText(" ");// TODO add your handling code here:
+        controladorProfesor.procesoControladorProfesor();
+       // TODO add your handling code here:
     }//GEN-LAST:event_btmAgregarActionPerformed
 
     private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
@@ -329,6 +323,7 @@ public class VProfesores extends javax.swing.JFrame {
         txtId.setText(null);
         txtCorreoPersonal.setText(null);
         txtSueldo.setText(null);
+        txtId.setText(null);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     public String getNombreProfesor() {
@@ -363,8 +358,33 @@ public class VProfesores extends javax.swing.JFrame {
         return txtBuscar.getText();
     }
 
-    public void setNombre(String nombre){
-        lblNombreDos.setText(nombre);
+    
+    public void setNombre(String correo) {
+        lblNombreDos.setText(correo);
+    }
+    
+    public void setCorreoPersonalDos(String correo) {
+        lblCorreoPersonalDos.setText(correo);
+    }
+
+    public void setCorreoInstitucionalDos(String correoI) {
+        lblCorreoInstitucionalDos.setText(correoI);
+    }
+
+    public void setCedulaD(String cedula) {
+        lblCedulaD.setText(cedula);
+    }
+
+    public void setSueldoDos(String sueldo) {
+        lblSueldoDos.setText(sueldo);
+    }
+
+    public void setEscalafonDos(String escalafon) {
+        lblEscalafonDos.setText(escalafon);
+    }
+
+    public void setIdDos(String Id){
+        lblIdDos.setText(Id);
     }
     /**
      * @param args the command line arguments

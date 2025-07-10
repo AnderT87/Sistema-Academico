@@ -24,7 +24,13 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblCorreoInstitucional" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCodigo" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="lblNivelJerarquico" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="txtBuscar" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
@@ -37,6 +43,24 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblCedulaDos" max="32767" attributes="0"/>
+                          <Component id="lblCorreoInstitucionalDos" max="32767" attributes="0"/>
+                          <Component id="lblCorreoPersonalDos" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblIdDos" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCodigoDos" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblNombreDos" alignment="0" min="-2" pref="237" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="330" max="32767" attributes="0"/>
@@ -52,42 +76,26 @@
               </Group>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
-                          <Component id="btmAgregar" min="-2" pref="104" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btmEliminar" min="-2" pref="110" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btmActualizar" min="-2" pref="114" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblCedula" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNivelJerarquico" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCodigo" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
-                              <Component id="lblCorreoInstitucional" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCorreoPersonal" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="btmBuscar" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblDatosEstudiantes" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNombreDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCorreoPersonalDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCedulaD" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCorreoInstitucionalDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblSueldoDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblEscalafonDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblIdDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                  <Component id="btmAgregar" min="-2" pref="104" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btmEliminar" min="-2" pref="110" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btmActualizar" min="-2" pref="114" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblCedula" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCorreoPersonal" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btmBuscar" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lblDatosEstudiantes" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -100,21 +108,44 @@
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="txtBuscar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="txtNombre" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="txtNombre" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="txtCorreoPersonal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCorreoPersonalDos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="txtCorreoPersonal" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblNombreDos" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtCedula" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtCedula" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCedulaDos" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtCorreoInstitucional" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtCorreoInstitucional" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCorreoInstitucional" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCorreoInstitucionalDos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtCodigo" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCodigoDos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="lblCodigo" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtId" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblNivelJerarquico" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblIdDos" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="85" max="32767" attributes="0"/>
               <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -127,40 +158,12 @@
                       <Component id="lblDatosEstudiantes" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNombreDos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblCorreoPersonal" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="lblCorreoPersonalDos" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="lblNombre" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCedula" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCedulaD" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="lblCorreoPersonal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCorreoInstitucional" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCorreoInstitucionalDos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblSueldoDos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblNivelJerarquico" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblEscalafonDos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lblIdDos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                  <Component id="lblCedula" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btmAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btmEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -178,12 +181,7 @@
         <Property name="text" type="java.lang.String" value="Codigo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblSueldoDos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="---------------------------------------------"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblEscalafonDos">
+    <Component class="javax.swing.JLabel" name="lblCodigoDos">
       <Properties>
         <Property name="text" type="java.lang.String" value="---------------------------------------------"/>
       </Properties>
@@ -270,7 +268,7 @@
         <Property name="text" type="java.lang.String" value="Correo Personal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblCedulaD">
+    <Component class="javax.swing.JLabel" name="lblCedulaDos">
       <Properties>
         <Property name="text" type="java.lang.String" value="---------------------------------------------"/>
       </Properties>

@@ -57,9 +57,16 @@ public class ControladorPersonaInvitada {
     public void procesoBuscarPersona() {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
-            boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            if (PersonaBuscada == true) {
+            PersonaInvitada PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
+            if (PersonaBuscada != null) {
                 notificarMensaje.mostrarMensaje("Persona encontrada");
+                vistaPersonaInvitada.setNombre(PersonaBuscada.getNombre());
+               vistaPersonaInvitada.setCorreoPersonalDos(PersonaBuscada.getCorreo());
+                vistaPersonaInvitada.setDescripcion(PersonaBuscada.getDescripcion());
+                vistaPersonaInvitada.setCedulaD(PersonaBuscada.getCedula());
+                 vistaPersonaInvitada.setIdDos(String.valueOf(PersonaBuscada.getId()));
+                
+                
             } else {
                 notificarMensaje.mostrarMensaje("Persona no encontrada");
             }
@@ -71,9 +78,9 @@ public class ControladorPersonaInvitada {
     public void procesoEliminarPersona() {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
-            boolean PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
+           PersonaInvitada PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
             //Profesor eliminarProfesor = new Profesor(0," "," ",  0, " ", " ");
-            if (PersonaBuscada == true) {
+            if (PersonaBuscada != null) {
                 iPersonasInvitadas.eliminarPersonaInvitada(idPersonaInvitada);
                 notificarMensaje.mostrarMensaje("Persona Eliminada");
             }
@@ -86,8 +93,8 @@ public class ControladorPersonaInvitada {
         try {
             int idPersonaInvitada = Integer.parseInt(vistaPersonaInvitada.getBuscar());
 
-            boolean x = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
-            if (x) {
+            PersonaInvitada PersonaBuscada = iPersonasInvitadas.buscarPersonaInvitada(idPersonaInvitada);
+            if (PersonaBuscada != null) {
                 String nombrePersonaInvitada = vistaPersonaInvitada.getNombre();
                 String correoPersonaInvitada = vistaPersonaInvitada.getCorreo();
                 String cedulaPersonaInvitada = vistaPersonaInvitada.getCedula();

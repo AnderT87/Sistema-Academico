@@ -281,6 +281,8 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
         txtCorreo.setText(null);
         txtCedu.setText(null);
         txtDescripcion.setText(null);
+        txtDI.setText(null);
+        lblCedulaDos.setText(null);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
@@ -310,6 +312,26 @@ public class VPersonasInvitadas extends javax.swing.JFrame {
         return txtBuscar.getText();
     }
 
+    
+    public void setNombre(String nombre) {
+        lblNombreDos.setText(nombre);
+    }
+    
+    public void setCorreoPersonalDos(String correo) {
+        lblCorreoDos.setText(correo);
+    }
+
+    public void setCedulaD(String cedula) {
+        lblCedulaDos.setText(cedula);
+    }
+
+    public void setIdDos(String Id){
+        lblIdDos.setText(Id);
+    }
+    
+    public void setDescripcion(String descripcion){
+        lblDescripcionDos.setText(descripcion);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
